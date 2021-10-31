@@ -1,0 +1,152 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@400;500&display=swap');
+     :root {
+        --black: #191919;
+        --primary: #eebf05;
+        --hover: #ffcc00dc;
+        --white: rgb(255, 247, 247);
+        --font-roboto: 'Roboto', sans-serif;
+        --font-lato: 'Lato', sans-serif;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white);
+    }
+    
+    .container {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: var(--black)
+    }
+    
+    .title {
+        font-size: 3rem;
+        font-family: var(--font-roboto);
+    }
+    
+    .sub-title {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-family: var(--font-lato);
+    }
+    
+    .search-box {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .search-box>input {
+        height: 3em;
+        width: 25rem;
+        border: 2px solid var(--primary);
+        border-right: none;
+        color: var(--primary);
+        font-family: var(--font-roboto);
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    
+    input:focus,
+    textarea:focus,
+    select:focus {
+        outline: none;
+    }
+    
+    .search-box>input::placeholder {
+        padding-left: 10px;
+        color: var(--primary);
+    }
+    
+    .search-box>button {
+        border: 1px solid var(--primary);
+        width: 5.5rem;
+        background-color: var(--primary);
+        color: var(--white);
+        font-family: var(--font-roboto);
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        transition: 0.2s;
+    }
+    
+    .search-box>button:hover {
+        background-color: var(--hover);
+        letter-spacing: .5px;
+    }
+    /* results */
+    
+    .results {
+        text-align: center;
+        margin-top: 3em;
+        color: --black;
+        font-family: var(--font-lato);
+    }
+    
+    .list-results {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+    
+    .card {
+        align-self: center;
+        border-radius: 20px;
+        width: 20em;
+        height: 25em;
+        margin: 1em 1em;
+        -webkit-box-shadow: 6px 6px 18px 5px rgba(0, 0, 0, 0.24);
+        box-shadow: 6px 6px 18px 5px rgba(0, 0, 0, 0.24);
+    }
+    
+    .card img {
+        height: 15em;
+        width: 20em;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    
+    .card-name {
+        padding-top: 1rem;
+        text-align: center;
+        font-family: var(--font-roboto);
+    }
+    
+    .get-recipe {
+        padding-top: 3em;
+        text-align: center;
+    }
+    
+    .card .get-recipe button {
+        border: none;
+        width: 12em;
+        height: 3em;
+        background-color: var(--primary);
+        color: var(--white);
+        font-family: var(--font-roboto);
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 1.3px;
+        transition: 0.2s;
+    }
+    
+    .card .get-recipe button:hover {
+        background-color: var(--hover);
+        letter-spacing: .5px;
+    }
+    /* pop-up recipe */
