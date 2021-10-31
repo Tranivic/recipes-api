@@ -143,6 +143,7 @@
         cursor: pointer;
         letter-spacing: 1.3px;
         transition: 0.2s;
+        border-radius: 25px;
     }
     
     .card .get-recipe button:hover {
