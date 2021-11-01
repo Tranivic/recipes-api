@@ -97,7 +97,6 @@
     }
     
     .list-results {
-        background-color: var(--white);
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -126,8 +125,6 @@
         text-align: center;
         font-family: var(--font-roboto);
     }
-    
-    .card-type {}
     
     .get-recipe {
         padding-top: 3em;
