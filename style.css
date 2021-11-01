@@ -1,7 +1,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@400;500&display=swap');
      :root {
         --black: #191919;
-        --primary: #eebf05;
+        --primary: #ffcd07;
         --hover: #ffcc00dc;
         --white: rgb(255, 247, 247);
         --font-roboto: 'Roboto', sans-serif;
@@ -97,19 +97,19 @@
     }
     
     .list-results {
-        width: 100%;
+        background-color: var(--white);
         display: flex;
+        justify-content: flex-start;
         flex-wrap: wrap;
-        margin-top: 3rem;
-        justify-content: center;
+        width: 80%;
+        margin: auto;
     }
     
     .card {
-        align-self: center;
+        text-align: center;
         border-radius: 20px;
-        width: 20em;
-        height: 25em;
         margin: 1em 1em;
+        width: 20em;
         -webkit-box-shadow: 6px 6px 18px 5px rgba(0, 0, 0, 0.24);
         box-shadow: 6px 6px 18px 5px rgba(0, 0, 0, 0.24);
     }
@@ -127,12 +127,14 @@
         font-family: var(--font-roboto);
     }
     
+    .card-type {}
+    
     .get-recipe {
         padding-top: 3em;
         text-align: center;
     }
     
-    .card .get-recipe button {
+    .btn {
         border: none;
         width: 12em;
         height: 3em;
@@ -144,16 +146,71 @@
         letter-spacing: 1.3px;
         transition: 0.2s;
         border-radius: 25px;
+        margin-bottom: 2em;
     }
     
-    .card .get-recipe button:hover {
+    .btn:hover {
         background-color: var(--hover);
         letter-spacing: .5px;
     }
     /* pop-up meal */
     
     .meal-details-content {
-        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
         text-align: center;
-        background-color: var(--primary)
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        background: var(--primary);
+        color: var(--black);
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+        width: 50%;
+        height: 60%;
+        padding: 2rem 0;
+        font-family: var(--font-roboto);
+        padding: 2em;
+        display: none;
+        overflow-y: scroll;
+    }
+    
+    .meal-details-content .meal-type {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+        margin-top: .5em;
+    }
+    
+    .meal-details-content .meal-type>h3 {
+        background-color: var(--black);
+        color: var(--white);
+        border-radius: 12px;
+        width: 5rem;
+    }
+    
+    .meal-details-content>button {
+        border: none;
+        width: 12em;
+        height: 3em;
+        background-color: var(--black);
+        color: var(--white);
+        font-family: var(--font-roboto);
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 1.3px;
+        transition: 0.2s;
+        border-radius: 25px;
+        margin-top: 3em;
+    }
+    
+    .meal-details-content>button:hover {
+        background-color: #2e2d2d;
+        letter-spacing: .5px;
     }
