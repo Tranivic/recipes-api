@@ -8,9 +8,7 @@ const recipeCloseBtn = document.getElementById('close-btn');
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
-});
+recipeCloseBtn.addEventListener('click', () => {});
 
 // get meal list that matches with the ingredients
 function getMealList() {
@@ -44,4 +42,31 @@ function getMealList() {
 
             mealList.innerHTML = html;
         });
+}
+
+// get recipe of the meal
+function getMealRecipe(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('recipe-btn')) {
+        let mealItem = e.target.parentElement.parentElement;
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.id}`)
+            .then(response => response.json())
+            .then(data => getModal(data.meals));
+    }
+}
+
+function getModal(meals) {
+    meals = meals[0]
+    mealDetailsContent.style = 'display: block'
+    let html = `
+    <h2 class="meal-name">${meals.strMeal}</h2>
+    <div class="meal-type">
+    <h3>${meals.strCategory}</h3>
+   </div>
+   <h1>Instruction</h1>
+   <p class="meal-description">${meals.strInstructions}</p>
+   <button id="close-btn" class="close-btn">Close</button>
+    `;
+
+    mealDetailsContent.innerHTML = html
 }

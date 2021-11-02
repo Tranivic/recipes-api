@@ -120,14 +120,14 @@
         border-top-right-radius: 1rem;
     }
     
-    .card-name {
-        padding-top: 1rem;
+    .recipe-name {
         text-align: center;
         font-family: var(--font-roboto);
+        max-height: 1em;
     }
     
     .get-recipe {
-        padding-top: 3em;
+        margin-top: 5em;
         text-align: center;
     }
     
@@ -150,7 +150,7 @@
         background-color: var(--hover);
         letter-spacing: .5px;
     }
-    /* pop-up meal -------------------------------------------------------------------------------------------------------------------------------------------------- */
+    /* modal meal -------------------------------------------------------------------------------------------------------------------------------------------------- */
     
     .meal-details-content {
         position: fixed;
