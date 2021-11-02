@@ -2,13 +2,15 @@
 const searchBtn = document.getElementById('btn-search');
 const mealList = document.getElementById('list-results');
 const mealDetailsContent = document.querySelector('.meal-details-content');
-const recipeCloseBtn = document.getElementById('close-btn');
+
 
 
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', () => {});
+recipeCloseBtn.addEventListener('click', () => {
+    console.log("oi");
+});
 
 // get meal list that matches with the ingredients
 function getMealList() {
@@ -67,6 +69,5 @@ function getModal(meals) {
    <p class="meal-description">${meals.strInstructions}</p>
    <button id="close-btn" class="close-btn">Close</button>
     `;
-
     mealDetailsContent.innerHTML = html
 }
