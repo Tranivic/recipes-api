@@ -66,7 +66,7 @@ function getModal(meals) {
     <div class="meal-type">
     <h3>${meals.strCategory}</h3>
    </div>
-   <h1>Instruction</h1>
+   <h1>How to do:</h1>
    <p class="meal-description">${meals.strInstructions}</p>
    <button id="close-btn" class="close-btn">Close</button>
     `;

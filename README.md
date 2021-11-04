@@ -1,14 +1,10 @@
 # 🍲Meals for your ingredients.🍲
 
-*Projeto criado para exercitar e praticar o consumo de API e DOM* .
+*Projeto simples criado para exercitar e praticar o consumo de API e DOM* .
 
 
 
 O Usuário digita o ingrediente que deseja encontrar receitas contendo o mesmo. 
-
-
-
-*Projeto atualmente em construção...*
 
 <br>
 
