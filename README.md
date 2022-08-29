@@ -18,7 +18,7 @@ https://www.themealdb.com/
 
 <br>
 
-Você pode acessar a demonstração: [Aqui](https://a-uvic.github.io/recipes-api/)
+Você pode acessar a demonstração: [Aqui](https://Tranivic.github.io/recipes-api/)
 
 
 
